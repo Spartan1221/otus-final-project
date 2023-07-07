@@ -1,0 +1,20 @@
+- job-template:
+    name: 'citrus-tests'
+    description: 'Running Citrus tests'
+    project-type: pipeline
+    concurrent: false
+    logrotate:
+      daysToKeep: 30
+      numToKeep: 10
+    properties:
+      - build-discarder:
+          num-to-keep: 10
+    parameters:
+      - string:
+          name: BRANCH
+          default: master
+          description: 'Branch to tests repo'
+    pipeline-scm:
+      scm:
+      - git-jenkins-citrus
+      script-path: jenkins/citrus-tests.groovy

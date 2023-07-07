@@ -1,0 +1,64 @@
+---
+- scm:
+    name: git-jenkins-jobs
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus_selenoide.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:
+    name: git-jenkins-appium
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus-apium.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:
+    name: git-jenkins-wiremock
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus_wiremock.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:
+    name: git-jenkins-api
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus_api_homework.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:
+    name: git-jenkins-cucumber
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus_homeworks_cucmber.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:    
+    name: git-jenkins-selenium
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/otus_homeworks.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
+- scm:
+    name: git-jenkins-citrus
+    scm:
+    - git:
+        url: https://github.com/Spartan1221/citrus-framework-tests.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${BRANCH}
